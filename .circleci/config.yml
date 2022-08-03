@@ -31,7 +31,7 @@ jobs:
           name: "Executing tunnel binary"
           background: true
           command: |
-            ./LT --deepanshulambdatest --jlBs32Zt7Q6Omx3ZThhWz1GTAzNQe96m7MP2Z6645UuZ2oVqTo
+            LT  --user deepanshu@lambdatest.com --key jlBs32Zt7Q6Omx3ZThhWz1GTAzNQe96m7MP2Z6645UuZ2oVqTo
             sleep 40
       
       - run: 
