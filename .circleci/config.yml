@@ -31,7 +31,7 @@ jobs:
           name: "Executing tunnel binary"
           background: true
           command: |
-            ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY}
+            ./LT -user deepanshu@lambdatest.com -key jlBs32Zt7Q6Omx3ZThhWz1GTAzNQe96m7MP2Z6645UuZ2oVqTo
             sleep 40
       
       - run: 
@@ -45,7 +45,7 @@ jobs:
             echo 'export LT_ACCESS_KEY="jlBs32Zt7Q6Omx3ZThhWz1GTAzNQe96m7MP2Z6645UuZ2oVqTo"' >> $BASH_ENV
 
       - run: # test what branch we're on.
-          name: "Here is the LT_Username : "
+          name: "deepanshulambdatest : "
           command: echo ${LT_USERNAME}       
 
       # Download and cache dependencies
