@@ -31,21 +31,21 @@ jobs:
           name: "Executing tunnel binary"
           background: true
           command: |
-            LT  --user deepanshu@lambdatest.com --key jlBs32Zt7Q6Omx3ZThhWz1GTAzNQe96m7MP2Z6645UuZ2oVqTo
+             ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY}
             sleep 40
       
       - run: 
           name: "Setup custom environment variables"
           command: |
-            echo 'export LT_USERNAME="deepanshulambdatest"' >> $BASH_ENV
+            echo 'export LT_USERNAME="${LAMBDATEST_USERNAME}' >> $BASH_ENV
 
       - run:
           name: "Setup custom environment variables"
           command: |
-            echo 'export LT_ACCESS_KEY="jlBs32Zt7Q6Omx3ZThhWz1GTAzNQe96m7MP2Z6645UuZ2oVqTo"' >> $BASH_ENV
+            echo 'export LT_ACCESS_KEY="${LAMBDATEST_ACCESS_KEY}"' >> $BASH_ENV
 
       - run: # test what branch we're on.
-          name: "deepanshulambdatest :deepanshulambdatest"
+          name: "Here is the LT_Username :"
           command: echo ${LT_USERNAME}       
 
       # Download and cache dependencies
