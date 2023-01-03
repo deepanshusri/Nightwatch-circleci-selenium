@@ -32,7 +32,7 @@ jobs:
           background: true
           command: |
              ./LT -user ${LAMBDATEST_EMAIL} -key ${LAMBDATEST_KEY}
-            sleep 40
+            
       
       - run: 
           name: "Setup custom environment variables"
